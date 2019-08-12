@@ -1,7 +1,6 @@
 # Mac
 .DS_Store
-.env
-sentimeantalhackernews/.env
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
