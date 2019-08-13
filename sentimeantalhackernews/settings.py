@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import django_heroku
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
@@ -191,3 +192,5 @@ LOGGING = {
         },
     },
 }
+
+django_heroku.settings(locals())
