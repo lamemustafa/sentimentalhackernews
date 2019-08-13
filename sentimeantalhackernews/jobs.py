@@ -6,16 +6,16 @@ from aylienapiclient import textapi
 import logging
 import traceback
 from trendinghackernews.models import Topstoryinfo
-
+from .settings import APP_ID,APP_KEY
 
 scheduler = BackgroundScheduler()
 scheduler.add_jobstore(DjangoJobStore(), "default")
 
 logging = logging.getLogger('__name__')
-client = textapi.Client("29a82717","7eae2bea79dedcb29ef84c8e78202d80")
+client = textapi.Client(APP_ID,APP_KEY)
 
 #this method is automatically called in backgroud after every 30 minutes
-@register_job(scheduler, "interval", minutes=3, replace_existing=True)
+@register_job(scheduler, "interval", minutes=30, replace_existing=True)
 def fetch_new_stories_job():
 
     #get top story ids from hacker news
