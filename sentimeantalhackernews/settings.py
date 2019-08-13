@@ -15,17 +15,6 @@ import django_heroku
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
-DB_NAME=os.getenv("DB_NAME")
-DB_USERNAME=os.getenv("DB_USERNAME")
-DB_PASSWORD=os.getenv("DB_PASSWORD")
-DB_HOST=os.getenv("DB_HOST")
-DB_PORT=os.getenv("DB_PORT")
-LOCAL_DB_NAME=os.getenv("LOCAL_DB_NAME")
-LOCAL_DB_USERNAME=os.getenv("LOCAL_DB_USERNAME")
-LOCAL_DB_PASSWORD=os.getenv("LOCAL_DB_PASSWORD")
-LOCAL_DB_HOST=os.getenv("LOCAL_DB_HOST")
-APP_ID=os.getenv("AYLIEN_APP_ID")
-APP_KEY=os.getenv("AYLIEN_APP_KEY")
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -106,11 +95,11 @@ WSGI_APPLICATION = 'sentimeantalhackernews.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': DB_NAME,
-        'USER': LOCAL_DB_USERNAME,
-        'PASSWORD':DB_PASSWORD,
-        'HOST':DB_HOST,
-        'PORT':DB_PORT,
+        'NAME': "dfuk4mh2iaf5qh",
+        'USER': "ajpmdvrdtbxomo",
+        'PASSWORD':"a8bd5f72e3ae57424484f234d500d83355edc40a37cca8462ca65891a5f7c829",
+        'HOST':"ec2-54-83-13-145.compute-1.amazonaws.com",
+        'PORT':"5432",
     }
 }
 
